@@ -166,7 +166,7 @@ img {
 
 input {
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 20px;
   font-size: 20px;
   color: #171717;
@@ -232,13 +232,13 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-between;
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-  -moz-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  -webkit-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+  top: 48%;
+  transform: translate(0, -48%);
+  -moz-transform: translate(0, -48%);
+  -ms-transform: translate(0, -48%);
+  -webkit-transform: translate(0, -48%);
+  -o-transform: translate(0, -48%);
+  transform: translate(0, -48%);
   z-index: 10;
 }
 
@@ -522,7 +522,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 600;
   display: inline-block;
   width: 100%;
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
 }
 
@@ -547,9 +547,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .footer .line {
-  width: 100%;
+  width: 80%;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0) 0px, rgb(255, 255, 255) 200px, rgb(255, 255, 255) 960px, rgba(255, 255, 255, 0) 1460px, transparent);
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0) 0px, rgb(255, 255, 255) 200px, rgb(255, 255, 255) 960px, rgba(255, 255, 255, 0) 1100px, transparent);
   margin-bottom: 8px;
   display: block;
   margin: 0 auto;
@@ -721,6 +721,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .why__content-info {
+  width: 100%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1760,6 +1761,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (max-width: 479px) {
+  .swiper__buttons > div {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mistakesSwiper .swiper-slide .mistake__title {
+    padding: 10px 0;
+  }
+
   .container {
     width: auto;
     max-width: none;
