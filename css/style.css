@@ -151,7 +151,7 @@ img {
 
 .btn {
   color: #ffffff;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Exo 2", Arial, sans-serif;
   font-weight: 400;
   border-width: 1px;
@@ -160,6 +160,7 @@ img {
   background-position: center center;
   border-color: transparent;
   border-style: solid;
+  height: 95px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
@@ -230,7 +231,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .swiper__buttons {
-  width: 100%;
+  width: 104%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -239,7 +240,6 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  left: 0;
   top: 48%;
   transform: translate(0, -48%);
   -moz-transform: translate(0, -48%);
@@ -247,6 +247,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-transform: translate(0, -48%);
   -o-transform: translate(0, -48%);
   transform: translate(0, -48%);
+  left: -2%;
   z-index: 10;
 }
 
@@ -583,7 +584,7 @@ body::-webkit-scrollbar-thumb {
   display: inline-block;
   width: 100%;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer .footer__top .col:has(nav) ul {
@@ -1120,6 +1121,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .mistakesSwiper {
+  overflow: visible !important;
   border-radius: 20px;
 }
 
@@ -1241,11 +1243,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .steps ul li:first-child {
-  border-radius: 25px 0 0 25px;
+  border-radius: 20px 0 0 20px;
 }
 
 .steps ul li:last-child {
-  border-radius: 0 25px 25px 0;
+  border-radius: 0 20px 20px 0;
 }
 
 .steps ul li span {
@@ -1479,7 +1481,7 @@ body::-webkit-scrollbar-thumb {
 .consultation__form-phone a {
   color: #f16a50;
   font-size: 48px;
-  font-size: 24px;
+  font-weight: bold;
 }
 
 .consultation__form form {
@@ -1500,6 +1502,8 @@ body::-webkit-scrollbar-thumb {
 .consultation__form form button {
   flex: 1;
   color: #FFFFFF;
+  height: 80px;
+  border-radius: 25px;
 }
 
 .consultation__form .consultation__form-inner > p {
@@ -1626,10 +1630,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (max-width: 991px) {
-  .gallerySwiper {
-    overflow: hidden !important;
-  }
-
   .container {
     max-width: 940px;
     width: 94.9vw;
@@ -1906,6 +1906,10 @@ body::-webkit-scrollbar-thumb {
 
   .consultation__inner > img {
     width: 100%;
+  }
+
+  .consultation__form-phone a {
+    font-size: 32px;
   }
 
   .faq__link a {
