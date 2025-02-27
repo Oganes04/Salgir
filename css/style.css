@@ -177,8 +177,32 @@ input {
   background-color: #fff;
   padding: 30px;
   border-radius: 20px;
-  font-size: 20px;
+  font-size: 18px;
   color: #171717;
+  font-weight: 300;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  height: 77px;
+}
+
+input::placeholder {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+input:focus {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+input:focus::placeholder {
+  opacity: 0;
 }
 
 body::-webkit-scrollbar {
@@ -354,6 +378,50 @@ body::-webkit-scrollbar-thumb {
   left: 50%;
 }
 
+.breadcrumbs {
+  position: relative;
+  padding-top: 60px;
+  color: #fff;
+  z-index: 10;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.breadcrumbs a {
+  color: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: relative;
+}
+
+.breadcrumbs a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.breadcrumbs a:hover::after {
+  opacity: 1;
+}
+
+.breadcrumbs span {
+  color: #fff;
+  font-weight: 600;
+}
+
 .header__inner {
   display: -webkit-box;
   display: -moz-box;
@@ -374,7 +442,7 @@ body::-webkit-scrollbar-thumb {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -390,6 +458,41 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
+}
+
+.header__top .header__download span {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header__top .header__download svg path {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header__top .header__download:hover {
+  color: #f16a50;
+}
+
+.header__top .header__download:hover svg path {
+  fill: #f16a50;
+}
+
+.header__top .header__phones {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
 }
 
 .header__top .header__phone {
@@ -523,6 +626,10 @@ body::-webkit-scrollbar-thumb {
   -ms-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.header__inner nav ul li a strong {
+  font-weight: 600 !important;
 }
 
 .header__inner nav ul li a:hover {
@@ -699,11 +806,20 @@ body::-webkit-scrollbar-thumb {
   border-radius: 25px;
 }
 
+.offer .offer__buttons button.btn:hover img {
+  transform: rotate(-10deg);
+}
+
 .offer .offer__buttons button.btn img {
   height: 246px;
   position: absolute;
   left: -60px;
   top: -75px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .offer .offer__buttons button:last-of-type {
@@ -712,6 +828,15 @@ body::-webkit-scrollbar-thumb {
   border-radius: 25px;
   background-color: #FFFFFF;
   font-size: 24px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.offer .offer__buttons button:last-of-type:hover {
+  background-color: #ffeae5;
 }
 
 .offer .offer__advantages {
@@ -812,6 +937,7 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   border-radius: 20px;
   height: 400px;
+  max-width: 690px;
 }
 
 .why__content-info ul {
@@ -822,6 +948,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex: 1;
 }
 
 .why__content-info li {
@@ -839,6 +966,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background-color: #ffffff;
   border: 1px solid #ffeae5;
+  min-height: 80px;
 }
 
 .why__content-btns {
@@ -886,8 +1014,8 @@ body::-webkit-scrollbar-thumb {
 
 .home__catalog-card > img {
   border-radius: 20px;
-  max-height: 314px;
   object-fit: cover;
+  aspect-ratio: 4/3;
 }
 
 .home__catalog-card--pagination {
@@ -1240,6 +1368,15 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.steps ul li:hover {
+  color: #f16a50;
 }
 
 .steps ul li:first-child {
@@ -1268,6 +1405,7 @@ body::-webkit-scrollbar-thumb {
   display: -webkit-flex;
   display: flex;
   align-items: flex-start;
+  align-items: center;
   gap: 40px;
   display: none;
 }
@@ -1315,6 +1453,7 @@ body::-webkit-scrollbar-thumb {
   width: 280px;
   font-size: 20px;
   font-weight: bold;
+  border-radius: 25px;
 }
 
 .faq__items {
@@ -1329,6 +1468,9 @@ body::-webkit-scrollbar-thumb {
 .faq__item {
   width: 100%;
   cursor: pointer;
+  border-radius: 20px;
+  background-color: #ffeae5;
+  height: fit-content;
 }
 
 .faq__item-header {
@@ -1343,11 +1485,6 @@ body::-webkit-scrollbar-thumb {
   padding: 25px 30px;
   border-radius: 20px;
   background-color: #ffeae5;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -ms-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
 }
 
 .faq__item-header p {
@@ -1503,7 +1640,7 @@ body::-webkit-scrollbar-thumb {
   flex: 1;
   color: #FFFFFF;
   height: 80px;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 
 .consultation__form .consultation__form-inner > p {
@@ -1576,6 +1713,38 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
 }
 
+.about__offer {
+  position: relative;
+  color: #fff;
+}
+
+.about__offer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(23, 23, 23, 0.8);
+}
+
+.about__offer .about__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__offer-inner {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
 @media only screen and (max-width: 1560px) {
   .container {
     max-width: 1160px;
@@ -1588,6 +1757,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (max-width: 1200px) {
+  .header__top .header__phone {
+    align-items: center;
+  }
+
+  .header__top .header__phone img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__top .header__download span {
+    max-width: 60px;
+  }
+
   .header__top .logo {
     max-width: 180px;
     display: -webkit-box;
@@ -1822,6 +2004,33 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (max-width: 575px) {
+  input {
+    height: 56px;
+  }
+
+  .offer {
+    background-position: 59.959% 45.5%;
+  }
+
+  .offer h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .offer h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .offer .offer__inner > p {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  .section__header {
+    margin-bottom: 40px;
+  }
+
   .section__header h2 {
     font-size: 32px;
   }
@@ -1839,6 +2048,22 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
   }
 
+  .catalog__form-info form input {
+    flex: auto;
+  }
+
+  .catalog__form-info form button {
+    width: 100%;
+  }
+
+  .consultation__info h2 {
+    font-size: 28px;
+  }
+
+  .consultation__info h2 br {
+    display: none;
+  }
+
   .steps ul {
     overflow-x: auto;
   }
@@ -1849,6 +2074,105 @@ body::-webkit-scrollbar-thumb {
 
   .mistakesSwiper .swiper-slide .mistake__cards {
     flex-direction: column;
+  }
+
+  .why__selects {
+    height: 110px;
+  }
+
+  .why__selects button {
+    min-width: 200px;
+  }
+
+  .catalog__form-inner {
+    padding: 100px 0;
+  }
+
+  .catalog__form-info h2 {
+    font-size: 28px;
+  }
+
+  .consultation__info > p {
+    font-weight: 300;
+  }
+
+  .consultation__info h3 {
+    font-weight: 300;
+    font-size: 22px;
+  }
+
+  .consultation__info button {
+    width: 100%;
+  }
+
+  .section__header h2 {
+    font-size: 28px;
+  }
+
+  .mistakesSwiper .swiper-slide h3 {
+    font-size: 32px;
+  }
+
+  .mistakesSwiper .swiper-slide .mistake__cards {
+    margin-top: -200px;
+  }
+
+  .mistakesSwiper .swiper-slide .mistake__card-header {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .mistakesSwiper .swiper-slide .mistake__card-header svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .mistakesSwiper .swiper-slide .mistake__card {
+    padding: 15px;
+  }
+
+  .mistakesSwiper .swiper-slide .mistake__card p {
+    font-size: 16px;
+  }
+
+  .step__content-info span {
+    font-size: 24px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .step__content-info a {
+    font-size: 24px;
+  }
+
+  .step__content-info p {
+    font-size: 18px;
+  }
+
+  .step__content-info button {
+    width: 100%;
+    width: fit-content;
+    padding: 0 20px;
+  }
+
+  .faq__link p {
+    text-align: center;
+  }
+
+  .consultation__form-info h2 {
+    font-size: 28px;
+  }
+
+  .consultation__form-phone span {
+    font-size: 24px;
+  }
+
+  .consultation__form-phone a {
+    font-size: 28px;
+  }
+
+  .consultation__form form input {
+    flex: auto;
   }
 }
 
@@ -1866,20 +2190,6 @@ body::-webkit-scrollbar-thumb {
     width: auto;
     max-width: none;
     margin: 0 15px;
-  }
-
-  .offer h1 {
-    font-size: 40px;
-    margin-bottom: 0;
-  }
-
-  .offer h2 {
-    font-size: 32px;
-  }
-
-  .offer .offer__inner > p {
-    font-size: 24px;
-    font-weight: 300;
   }
 
   .offer .offer__buttons button.btn img {
@@ -1906,10 +2216,6 @@ body::-webkit-scrollbar-thumb {
 
   .consultation__inner > img {
     width: 100%;
-  }
-
-  .consultation__form-phone a {
-    font-size: 32px;
   }
 
   .faq__link a {

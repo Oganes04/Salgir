@@ -12,15 +12,28 @@ if (document.querySelectorAll('.gallerySwiper').length) {
 
     const gallerySwiper= new Swiper('.gallerySwiper', {
         loop: true,
-        speed: 800,
-        spaceBetween: 120,
-        grabCursor: true,
+        slidesPerView: 1,
+        speed: 600,
         centeredSlides: true,
-        // autoplay: {
-        //     delay: 4000,
-        //     disableOnInteraction: false,
-        // },
-   
+        effect: "coverflow",
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+    
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+          },
+        coverflowEffect: {       
+            rotate: 0,            
+            depth: 230,         
+            stretch: 200,         
+            modifier: 1,        
+            scale: 0.9,              
+            slideShadows: true,   
+        },                         
+    
         navigation: {
             nextEl: ".gallerySwiper-silder-next",
             prevEl: ".gallerySwiper-silder-prev",
@@ -28,31 +41,49 @@ if (document.querySelectorAll('.gallerySwiper').length) {
         pagination: {
             el: ".gallerySwiper-pagination",
             clickable: true,
-        },
+          },
     })
 }
+
+
 
 
 if (document.querySelectorAll('.mistakesSwiper').length) {
-
-    const mistakesSwiper= new Swiper('.mistakesSwiper', {
-        // effect: "fade",
-        loop: true,
-        speed: 800,
-        spaceBetween: 120,
-        grabCursor: true,
-        centeredSlides: true,
-        // autoplay: {
-        //     delay: 4000,
-        //     disableOnInteraction: false,
-        // },
-   
-        navigation: {
-            nextEl: ".mistakesSwiper-silder-next",
-            prevEl: ".mistakesSwiper-silder-prev",
+    const mistakesSwiper = new Swiper('.mistakesSwiper', {
+      effect: "creative",
+      loop: true,
+      speed: 800,
+      spaceBetween: 120,
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 1,
+      
+      creativeEffect: {
+        prev: {
+          translate: ["-100%", 0, 0],
+          opacity: 0
         },
+        next: {
+          translate: ["100%", 0, 0],
+          opacity: 0
+        }
+      },
+  
+      navigation: {
+        nextEl: ".mistakesSwiper-silder-next",
+        prevEl: ".mistakesSwiper-silder-prev",
+      },
+      
+      on: {
+        init: function() {
+          this.slides.forEach(slide => {
+            // slide.querySelector('.swiper-slide-inner').style.transition = 'opacity 0.8s ease-in-out';
+          });
+        }
+      }
     })
-}
+  }
+
 
 
 $(".faq__item").on("click", function () {
