@@ -69,4 +69,36 @@ $("#burger_menu").click(function() {
     $("#catalogContentAdaptive").toggleClass("open");
     $("html").toggleClass("hidden");
     // $("body").toggleClass("site__fixed");
-  });
+});
+
+
+$(".home__catalog-card--pagination img").click(function() {
+    $(this).parent().find('img').removeClass('active');
+    $(this).addClass('active');
+
+    let currentLink = $(this).attr('src');
+    $(this).parent().parent().find('.home__catalog-card--main').attr('src', currentLink);
+  
+});
+
+
+$(".why__selects button").click(function() {
+    $(".why__selects button").removeClass('active');
+    $(this).addClass('active');
+
+    let currentSection = $(this).attr('data-why-btn');
+
+    $('.why__content').removeClass('active');
+    $('.why__content[data-why-content="' + currentSection + '"]').addClass('active');
+});
+
+
+$("li.step").click(function() {
+    $("li.step").removeClass('active');
+    $(this).addClass('active');
+
+    let currentSection = $(this).attr('data-step-btn');
+
+    $('.step__content').removeClass('active');
+    $('.step__content[data-step-content="' + currentSection + '"]').addClass('active');
+});
