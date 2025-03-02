@@ -2521,6 +2521,7 @@ body::-webkit-scrollbar-thumb {
 
 .catalog__inner .catalog__list .catalog__item-img {
   aspect-ratio: 4/3;
+  width: fit-content !important;
 }
 
 .catalog__inner .catalog__list .catalog__item-img .swiper {
